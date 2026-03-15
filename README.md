@@ -14,7 +14,7 @@ This project builds a Machine Learning model to predict the delivery time (in mi
 
 **Order details**
 
-City and time related factors
+- City and time related factors
 
 **The goal is to improve ETA accuracy so that customers receive reliable delivery time estimates.**
 
@@ -22,13 +22,13 @@ City and time related factors
 
 Accurate delivery time prediction is important because inaccurate ETAs can lead to:
 
--- Customer dissatisfaction
+- Customer dissatisfaction
 
- --Order cancellations
+ - Order cancellations
 
--- Increased support requests
+- Increased support requests
 
--- Poor delivery partner allocation
+- Poor delivery partner allocation
 
 **A reliable ETA prediction system helps Swiggy:**
 
@@ -86,7 +86,7 @@ Order_day	Day of month
 Order_month	Month of order
 order_day_of_week	Day of week
 Time_taken	Target variable (delivery time in minutes)
-⚙️ Machine Learning Pipeline
+## Machine Learning Pipeline
 
 The project follows the CRISP-ML(Q) methodology for building the model.
 
@@ -181,21 +181,19 @@ streamlit run app.py
 - Streamlit
 
 
-Project Structure
-Swiggy-Delivery-Time-Prediction
-│
-├── data
-│   └── swiggy_dataset.csv
-│
-├── notebook
-│   └── Swiggy Delivery Time Prediction.ipynb
-│
-├── model
-│   └── model.pkl
-│
-├── app.py
-├── requirements.txt
-└── README.md
+## Project Structure
+### Swiggy-Delivery-Time-Prediction
+
+ - data swiggy_dataset.csv
+### jupyternotebook
+ - Swiggy Delivery Time Prediction.ipynb
+
+ ### model
+ -model.pkl
+
+- app.py
+- requirements.txt
+- README.md
 ## Example Prediction
 
 Input features:

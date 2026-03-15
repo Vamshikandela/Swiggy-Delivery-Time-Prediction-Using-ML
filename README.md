@@ -189,7 +189,7 @@ streamlit run app.py
  - Swiggy Delivery Time Prediction.ipynb
 
  ### model
- -model.pkl
+ - model.pkl
 
 - app.py
 - requirements.txt

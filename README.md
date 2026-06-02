@@ -1,4 +1,14 @@
 
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-blue)
+![REST API](https://img.shields.io/badge/REST-API-green)
+![Cart System](https://img.shields.io/badge/Cart-System-orange)
+![Orders](https://img.shields.io/badge/Orders-Processing-purple)
+![Pagination](https://img.shields.io/badge/Pagination-Enabled-yellow)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
+
+
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge\&logo=pandas\&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge\&logo=numpy\&logoColor=white)

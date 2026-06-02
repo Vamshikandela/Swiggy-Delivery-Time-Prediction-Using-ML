@@ -1,33 +1,24 @@
+![Python](https://img.shields.io/badge/Python-Programming-blue)
+![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-purple)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical_Computing-darkblue)
 
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-blue)
-![REST API](https://img.shields.io/badge/REST-API-green)
-![Cart System](https://img.shields.io/badge/Cart-System-orange)
-![Orders](https://img.shields.io/badge/Orders-Processing-purple)
-![Pagination](https://img.shields.io/badge/Pagination-Enabled-yellow)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-navy)
+![Seaborn](https://img.shields.io/badge/Seaborn-Statistical_Plots-indigo)
+
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-orange)
+![XGBoost](https://img.shields.io/badge/XGBoost-Regression_Model-red)
+
+![Feature Engineering](https://img.shields.io/badge/Feature-Engineering-green)
+![EDA](https://img.shields.io/badge/EDA-Exploratory_Analysis-yellowgreen)
+
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployment-red)
+
+![Git](https://img.shields.io/badge/Git-Version_Control-orange)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-black)
+
+![Dataset](https://img.shields.io/badge/Dataset-45K+_Records-brightgreen)
+![R² Score](https://img.shields.io/badge/R²_Score-81.57%25-success)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-
-
-
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge\&logo=pandas\&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge\&logo=numpy\&logoColor=white)
-
-
-
-
-
-
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
-![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge)
-
-
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge\&logo=streamlit\&logoColor=white)
-
-
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge\&logo=git\&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)
-
 
 
 # 🚚 Swiggy Delivery Time Prediction

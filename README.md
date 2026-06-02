@@ -92,13 +92,13 @@ The project follows the CRISP-ML(Q) methodology for building the model.
 
 Steps followed:
 
- Business Understanding
- Data Understanding
- Data Preprocessing
- Feature Engineering
- Model Building
- Model Evaluation
-Model Deployment
+   Business Understanding
+   Data Understanding
+   Data Preprocessing
+   Feature Engineering
+   Model Building
+   Model Evaluation
+  Model Deployment
 
 # Data Preprocessing
 

@@ -1,226 +1,255 @@
-# Project Overview
+# 🚚 Swiggy Delivery Time Prediction
 
-Food delivery platforms like Swiggy handle thousands of orders every day across multiple cities. One of the most critical aspects of the customer experience is providing an accurate Estimated Time of Arrival (ETA) for food delivery.
+## 📌 Project Overview
 
-This project builds a Machine Learning model to predict the delivery time (in minutes) for an order using various real-world features such as:
+Food delivery platforms such as Swiggy process thousands of orders daily across multiple cities. Providing customers with an accurate Estimated Time of Arrival (ETA) is critical for maintaining trust and ensuring a smooth delivery experience.
 
-- Rider information
+This project leverages Machine Learning to predict food delivery time (in minutes) using real-world factors such as rider information, traffic conditions, weather, order characteristics, distance, and city-specific attributes.
 
-- Traffic conditions
+Using a dataset containing over **45,000 delivery records**, multiple regression models were trained and evaluated, with **XGBoost Regressor** emerging as the best-performing model, achieving an **R² Score of 81.57%**.
 
-- Weather conditions
+---
 
-- Distance between restaurant and customer
+## 🎯 Business Objective
 
-**Order details**
+Inaccurate delivery estimates can result in:
 
-- City and time related factors
+* Customer dissatisfaction
+* Increased order cancellations
+* Higher support ticket volume
+* Inefficient rider allocation
+* Reduced customer retention
 
-**The goal is to improve ETA accuracy so that customers receive reliable delivery time estimates.**
+A reliable ETA prediction system helps:
 
- # Business Problem
+* Improve customer trust and satisfaction
+* Optimize delivery partner assignments
+* Reduce order cancellations
+* Enhance operational efficiency
+* Improve overall delivery performance
 
-Accurate delivery time prediction is important because inaccurate ETAs can lead to:
+---
 
-- Customer dissatisfaction
+## ❓ Problem Statement
 
- - Order cancellations
+Develop a Machine Learning model capable of predicting food delivery time based on historical delivery data and real-time operational factors.
 
-- Increased support requests
+The model should consider:
 
-- Poor delivery partner allocation
+* Distance between restaurant and customer
+* Traffic conditions
+* Weather conditions
+* Order timing information
+* Rider attributes
+* City-specific factors
+* Delivery workload indicators
 
-**A reliable ETA prediction system helps Swiggy:**
+---
 
-Improve customer trust
+## 📊 Dataset Information
 
-Optimize rider assignment
+The dataset contains **45,000+ delivery records** and includes information related to riders, orders, locations, environmental conditions, and delivery performance.
 
-Reduce cancellations
+### Key Features
 
-Improve operational efficiency
+| Feature             | Description                     |
+| ------------------- | ------------------------------- |
+| Rider_ID            | Unique rider identifier         |
+| Age                 | Rider age                       |
+| Ratings             | Rider performance rating        |
+| Vehicle_Condition   | Vehicle condition score         |
+| Type_of_Vehicle     | Vehicle category                |
+| Type_of_Order       | Order category                  |
+| Multiple_Deliveries | Number of deliveries assigned   |
+| Pickup_Time_Minutes | Restaurant preparation time     |
+| Distance            | Delivery distance               |
+| Weather             | Weather conditions              |
+| Traffic             | Traffic intensity               |
+| Festival            | Festival indicator              |
+| City_Type           | Urban/Metropolitan/Semi-Urban   |
+| Order_Time_Hour     | Hour of order placement         |
+| Order_Time_Of_Day   | Morning/Afternoon/Evening/Night |
+| Order_Day           | Day of month                    |
+| Order_Month         | Month                           |
+| Order_Day_Of_Week   | Weekday                         |
+| Time_Taken          | Target Variable (Delivery Time) |
 
-# Problem Statement
+---
 
-Build a machine learning model that predicts the delivery time (minutes) for each order using historical delivery data.
+# 🔄 Machine Learning Pipeline
 
-The model should use multiple real-time factors such as:
+### Step 1: Business Understanding
 
-Weather
+* Defined the ETA prediction problem.
+* Identified key business challenges caused by inaccurate delivery estimates.
 
-Traffic
+### Step 2: Data Understanding
 
-Distance
+* Explored dataset structure and feature distributions.
+* Performed statistical analysis and data quality assessment.
 
-Order time
+### Step 3: Data Cleaning
 
-Rider information
+* Handled missing values.
+* Removed inconsistencies and invalid records.
+* Corrected data types.
 
-City details
+### Step 4: Exploratory Data Analysis (EDA)
 
-# Dataset Description
+* Analyzed delivery patterns.
+* Examined relationships between distance, traffic, weather, and delivery time.
+* Visualized feature distributions and correlations.
 
-The dataset contains multiple features related to orders, riders, locations, and environmental conditions.
+### Step 5: Feature Engineering
 
-Feature	Description
-Rider_id	Unique ID of delivery partner
-Age	Age of delivery partner
-Ratings	Average rider rating
-vehicle_condition	Condition of delivery vehicle
-Type_of_vehicle	Type of vehicle used
-Type_of_order	Type of food ordered
-multiple_deliveries	Number of deliveries handled together
-pickup_time_minutes	Restaurant preparation time
-restaurant_longitude	Restaurant location
-delivery_longitude	Customer delivery location
-Is_weekend	Whether order was on weekend
-Order_time_hour	Hour of order placement
-order_time_of_day	Time category (morning, afternoon, evening, night)
-Weather	Weather conditions
-Traffic	Traffic conditions
-Festival	Whether it was a festival day
-City_type	Urban / Metropolitan / Semi-Urban
-City_name	City code
-Distance	Distance between restaurant and delivery location
-Order_day	Day of month
-Order_month	Month of order
-order_day_of_week	Day of week
-Time_taken	Target variable (delivery time in minutes)
-## Machine Learning Pipeline
+* Created time-based features.
+* Generated distance-related variables.
+* Extracted useful insights from categorical attributes.
 
-The project follows the CRISP-ML(Q) methodology for building the model.
+### Step 6: Data Preprocessing
 
-Steps followed:
+* Encoded categorical variables using:
 
-   Business Understanding
-   Data Understanding
-   Data Preprocessing
-   Feature Engineering
-   Model Building
-   Model Evaluation
-  Model Deployment
+  * OneHotEncoder
+  * OrdinalEncoder
+* Scaled numerical features using:
 
-# Data Preprocessing
+  * MinMaxScaler
 
-The following preprocessing steps were performed:
+### Step 7: Feature Selection
 
-Handling missing values
+* Selected the most relevant features using:
 
-Feature engineering (time features)
+  * SelectKBest
 
-Encoding categorical variables
+### Step 8: Model Development
 
-Feature scaling
+Trained multiple regression models:
 
-Feature selection
+* Decision Tree Regressor
+* Random Forest Regressor
+* AdaBoost Regressor
+* Gradient Boosting Regressor
+* XGBoost Regressor
 
-## Techniques used:
+### Step 9: Model Evaluation
 
-OneHotEncoder
+Evaluated model performance using:
 
-OrdinalEncoder
+* R² Score
+* RMSE (Root Mean Squared Error)
 
-MinMaxScaler
+### Step 10: Model Selection
 
-SelectKBest
+* Compared all models.
+* Selected XGBoost Regressor as the final model.
 
-## Machine Learning Models Used
+### Step 11: Model Deployment
 
-Several regression models were tested:
+* Saved the trained model using Pickle.
+* Developed an interactive Streamlit application.
+* Enabled real-time delivery time prediction.
 
-Decision Tree Regressor
+---
 
-Random Forest Regressor
+## 🤖 Model Performance
 
-AdaBoost Regressor
+### Best Model: XGBoost Regressor
 
-Gradient Boosting Regressor
+**Performance Metrics**
 
-XGBoost Regressor (Best Model)
+* R² Score: **81.57%**
+* Dataset Size: **45,000+ Records**
+* Problem Type: **Regression**
 
-The XGBoost model performed best in predicting delivery time.
+---
 
-##  Model Evaluation Metrics
+## 🚀 Deployment
 
-The models were evaluated using:
+The final model was deployed using Streamlit.
 
-R² Score
+### Features
 
-Root Mean Squared Error (RMSE)
+* Real-time ETA prediction
+* Interactive user interface
+* Dynamic input forms
+* Easy-to-use web application
 
-These metrics measure how accurately the model predicts delivery time.
+Run Locally:
 
- # Model Deployment
-The trained model was deployed using Streamlit, allowing users to input order details and predict delivery time.
-
-Streamlit Features
-
-User-friendly interface
-
-Real-time prediction
-
-Interactive input fields
-
-Visual Swiggy banner
-
-Run the app:
-
+```bash
 streamlit run app.py
-## Technologies Used
+```
 
-- Python
+---
 
-- Pandas
+## 🛠️ Technology Stack
 
-- NumPy
+### Programming & Analysis
 
-- Scikit-learn
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge\&logo=pandas\&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge\&logo=numpy\&logoColor=white)
 
-- XGBoost
+### Machine Learning
 
-- Streamlit
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge\&logo=scikit-learn\&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-FF6600?style=for-the-badge)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-102230?style=for-the-badge)
 
+### Data Visualization
 
-## Project Structure
-### Swiggy-Delivery-Time-Prediction
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge)
 
- - data swiggy_dataset.csv
-### jupyternotebook
- - Swiggy Delivery Time Prediction.ipynb
+### Deployment
 
- ### model
- - model.pkl
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge\&logo=streamlit\&logoColor=white)
 
-- app.py
-- requirements.txt
-- README.md
-## Example Prediction
+### Version Control
 
-Input features:
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge\&logo=git\&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)
 
-Distance = 5 km
+---
 
-Traffic = High
+## 📂 Project Structure
 
-Weather = Cloudy
+```text
+Swiggy-Delivery-Time-Prediction
+│
+├── data/
+│   └── swiggy_dataset.csv
+│
+├── notebook/
+│   └── Swiggy_Delivery_Time_Prediction.ipynb
+│
+├── model/
+│   └── model.pkl
+│
+├── app.py
+├── requirements.txt
+└── README.md
+```
 
-Multiple Deliveries = 2
+---
 
-Predicted output:
+## 🔮 Future Enhancements
 
-Estimated Delivery Time: 32 minutes
-##  Future Improvements
+* Integrate live traffic APIs
+* Implement cloud deployment (AWS/Azure/GCP)
+* Containerize using Docker
+* Develop real-time ETA monitoring
+* Experiment with deep learning models
 
-Add live traffic APIs
+---
 
-Use deep learning models
+## 👨‍💻 Author
 
-Deploy using Docker or cloud platforms
+**Vamshi Kandela**
 
-Add real-time ETA updates
+Data Science & Machine Learning Enthusiast
 
-## Author
+📧 Email: vamshikandela29@gmail.com 
 
-Vamshi Kandela
-
-Machine Learning & Data Science Enthusiast
+🔗 LinkedIn: https://www.linkedin.com/in/kandela-vamshi-2b4457258

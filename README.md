@@ -4,9 +4,7 @@
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge\&logo=numpy\&logoColor=white)
 
 
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge\&logo=scikit-learn\&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-FF6600?style=for-the-badge)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-102230?style=for-the-badge)
+
 
 
 
